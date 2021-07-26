@@ -159,10 +159,10 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">지갑 리스트</h3>
+                        <h3 class="text-themecolor">지갑 인증</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">지갑 리스트</li>
+                            <li class="breadcrumb-item active">지갑 인증</li>
                         </ol>
                     </div>
                 </div>
@@ -171,38 +171,16 @@
                 <div class="row">
                     <!-- Column -->
                     <div class="col-md-6 offset-md-3">
-                        <div class="card text-center">
+                        <div class="card">
                             <div class="card-body">
                                 <div class="p-10">
                                     <div class="align-slef-center">
-                                        <h6 class="m-b-0">등록된 지갑이 없습니다. 지갑을 생성해주세요. <----(아무것도 없을떄...메시지)</h6>
-                                        <h6 class="m-b-0">지갑을 추가 생성할 수 있습니다. <-----(1개 이상 생성된 지갑 있을떄...메시지)</h6>
+                                        <h4 class="m-b-0 p-b-40">지갑 및 회원 인증 확인 중</h4>
+
+                                        <h6 class="text-warning p-t-40 p-b-40 text-center">현재 회원 정보 확인 중이며, 인증 철차는 2~5분 정도 소요됩니다.</br> 인증완료이 완료되야 지갑 사용이 가능합니다. 잠시만 기다려주세요. </br>(인증 지연 및 오류 발생 시 <a href="javascript:void(0)">1:1문의</a>로 문의바랍니다.)</h6>
+
                                         <div class="align-self-center text-center d-md-block p-t-30">
-                                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#responsive-modal"><i class="fa fa-plus-circle"></i> 지갑 만들기</button>
-                                            <!-- sample modal content -->
-                                            <div id="responsive-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                            <h4 class="modal-title">지갑 이름 설정</h4>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <form>
-                                                                <div class="form-group">
-                                                                    <label for="recipient-name" class="control-label">지갑이름을 영문, 숫자 2~20글자 이내로 입력해주세요.</label>
-                                                                    <input type="text" class="form-control" id="recipient-name">
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-default waves-effect text-danger" data-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-danger waves-effect waves-light">저장 하기</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- /.modal -->
+                                            <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">확인</button>
                                         </div>
                                     </div>
                                 </div>
@@ -212,63 +190,6 @@
                 </div>
                 <!-- ============================================================== -->
 
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-md-6 offset-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex p-10 no-block">
-                                    <div class="align-slef-center">
-                                        <h2 class="m-b-0">wallet 01</h2>
-                                        <h6 class="text-muted m-b-0">0x508ca30923982211a93145288dfeed7332652d2d</h6>
-                                    </div>
-                                    <div class="align-self-center display-6 ml-auto"><button type="button" class="btn waves-effect waves-light btn-rounded btn-danger">인증대기</button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                </div>
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-md-6 offset-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex p-10 no-block">
-                                    <div class="align-slef-center">
-                                        <h2 class="m-b-0">wallet 02</h2>
-                                        <h6 class="text-muted m-b-0">0x508ca30923982211a93145288dfeed7332652d2d</h6>
-                                    </div>
-                                    <div class="align-self-center display-6 ml-auto"><button type="button" class="btn waves-effect waves-light btn-rounded btn-success">인증</button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                </div>
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-md-6 offset-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex p-10 no-block">
-                                    <div class="align-slef-center">
-                                        <h2 class="m-b-0">wallet 03</h2>
-                                        <h6 class="text-muted m-b-0">0x508ca30923982211a93145288dfeed7332652d2d</h6>
-                                    </div>
-                                    <div class="align-self-center display-6 ml-auto"><button type="button" class="btn waves-effect waves-light btn-rounded btn-success">인증</button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                </div>
-                <!-- ============================================================== -->
 
 
 
