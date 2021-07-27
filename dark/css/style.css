@@ -219,14 +219,23 @@ html body .p-r-40 {
 html body .p-t-0 {
   padding-top: 0px; }
 
+html body .p-t-5 {
+  padding-top: 5px; }
+
 html body .p-t-10 {
   padding-top: 10px; }
 
-html body .p-b-20p-b-20 {
+html body .p-t-20 {
   padding-top: 20px; }
 
 html body .p-t-30 {
   padding-top: 30px; }
+
+html body .p-t-35 {
+  padding-top: 35px; }
+
+  html body .p-t-40 {
+    padding-top: 40px; }
 
 html body .p-b-0 {
   padding-bottom: 0px; }
