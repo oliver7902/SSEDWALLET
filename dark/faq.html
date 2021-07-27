@@ -22,6 +22,8 @@
     <link href="../assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
     <!--Toaster Popup message CSS -->
     <link href="../assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!--alerts CSS -->
+    <link href="../assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Dashboard 1 Page CSS -->
@@ -159,10 +161,10 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">구매하기</h3>
+                        <h3 class="text-themecolor">FAQ</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">구매하기</li>
+                            <li class="breadcrumb-item active">FAQ</li>
                         </ol>
                     </div>
                 </div>
@@ -170,17 +172,96 @@
 
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-md-6 offset-md-3">
+                    <div class="col-md-8 offset-md-2">
                         <div class="card">
                             <div class="card-body">
-                                <div class="p-10">
-                                    <div class="align-slef-center">
-                                        <h4 class="m-b-0 p-b-40">구매하기</h4>
-
-                                        <h6 class="text-warning p-t-40 p-b-40 text-center">계좌 확인 버튼을 누르고, 생성되는 계좌를 확인 후 구매 진행하세요.</h6>
-
-                                        <div class="align-self-center text-center d-md-block p-t-30">
-                                            <a href="token_purchase.html"><button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">계좌 확인</button></a>
+                                <h4 class="card-title">자주하는 질문</h4>
+                                <h6 class="card-subtitle">몇 번의 클릭으로 필요한 내용을 빠르게 확인할 수 있습니다.</h6>
+                                <div id="accordian-part">
+                                    <div id="accordian-3">
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <a href="#" class="link p-10" id="headingOne" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                                        Q1. 카드 코인 구매가 가능한가요?
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordian-3">
+                                                <div class="card-body p-l-0">
+                                                    카드구매는지원하지않습니다. 인증 및 확인 된 계좌입금으로 구매가 가능합니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <a href="#" class="collapsed link p-10" id="headingTwo" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                                        Q2. 지갑 생성 시 비용이 드나요?
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordian-3">
+                                                <div class="card-body p-l-0">
+                                                    추가 비용없이 다수의 지갑을 생성할 수 있습니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <a href="#" class="collapsed link p-10" id="headingThree" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                                        Q3. 코인은 어떻게 구매하나요?
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse3" class="collapse" aria-labelledby="headingThree" data-parent="#accordian-3">
+                                                <div class="card-body p-l-0">
+                                                    이용 중인 사이트의 인증 절차가 완료 되면, 지갑이 생성됩니다. 생성 된 지갑을 클릭 하시고, 구매 버튼을 누르면 구매가 가능합니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <a href="#" class="collapsed link p-10" id="headingFour" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                                        Q4. 구매한 코인은 거래소 및 개인 거래가 가능한가요?
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse4" class="collapse" aria-labelledby="headingFour" data-parent="#accordian-3">
+                                                <div class="card-body p-l-0">
+                                                    아직 거래소 상장 및 개인 거래는 불가합니다. 인증된 사이트에서만 사용이 가능합니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <a href="#" class="collapsed link p-10" id="headingFive" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                                        Q5. 회원 인증은 어떻게 하니요?
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse5" class="collapse" aria-labelledby="headingFive" data-parent="#accordian-3">
+                                                <div class="card-body p-l-0">
+                                                    회원 가입 후 지갑을 생성하세요. 생성 후 이용중인 사이트의 정보를 입력하시면, 인증 절차를 거쳐, 최종 승인 후에 사용이 가능합니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <a href="#" class="collapsed link p-10" id="headingSix" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                                        Q6. 구매한 코인은 언제 입금 되나요?
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse6" class="collapse" aria-labelledby="headingSix" data-parent="#accordian-3">
+                                                <div class="card-body p-l-0">
+                                                    구매 요청 후 입금 확인이 완료되면, 회원님의 지갑으로 바로 전송됩니다. 스마트 컨트랙트 기술로 안전하게 입급됩니다.
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -231,6 +312,10 @@
     <!--morris JavaScript -->
     <script src="../assets/node_modules/raphael/raphael.min.js"></script>
     <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
+    <!-- Sweet-Alert  -->
+    <script src="../assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+    <!-- ============================================================== -->
     <!--c3 JavaScript -->
     <script src="../assets/node_modules/d3/d3.min.js"></script>
     <script src="../assets/node_modules/c3-master/c3.min.js"></script>

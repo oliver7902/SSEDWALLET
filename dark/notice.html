@@ -22,6 +22,8 @@
     <link href="../assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
     <!--Toaster Popup message CSS -->
     <link href="../assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!--alerts CSS -->
+    <link href="../assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Dashboard 1 Page CSS -->
@@ -159,10 +161,10 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">구매하기</h3>
+                        <h3 class="text-themecolor">공지사항</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">구매하기</li>
+                            <li class="breadcrumb-item active">공지사항</li>
                         </ol>
                     </div>
                 </div>
@@ -170,18 +172,75 @@
 
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-md-6 offset-md-3">
+                    <div class="col-md-8 offset-md-2">
                         <div class="card">
                             <div class="card-body">
-                                <div class="p-10">
-                                    <div class="align-slef-center">
-                                        <h4 class="m-b-0 p-b-40">구매하기</h4>
-
-                                        <h6 class="text-warning p-t-40 p-b-40 text-center">계좌 확인 버튼을 누르고, 생성되는 계좌를 확인 후 구매 진행하세요.</h6>
-
-                                        <div class="align-self-center text-center d-md-block p-t-30">
-                                            <a href="token_purchase.html"><button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">계좌 확인</button></a>
+                                <h4 class="card-title">공지사항</h4>
+                                <h6 class="card-subtitle">SSE 월렛 운영 안내</h6>
+                                <div id="accordian-part">
+                                    <div id="accordian-3">
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <span class="text-muted p-l-10">2021-07-07</span>
+                                                    <a href="#" class="link p-10" id="headingOne" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                                        [이벤트] 회원 가입 이밴트 안내
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordian-3">
+                                                <div class="card-body p-l-10">
+                                                    [이벤트] 회원 가입 이밴트 안내</br>
+                                                    ■ 가입 조건 및 운영 기간</br>
+                                                    - 가입 조건 : 7월 1일 이후 신규 가입 및 농협 실명 계좌 최초 등록 고객</br>
+                                                    - 프로모션 운영 기간 : 2021년 7월 1일부터 9월 30일까지</br>
+                                                    - 페이백 지급일 : 가입 완료 이후 매 익월 10일경</br>
+                                                    회원님의 더욱 편리하고 안전한 거래를 위해 최선의 서비스를 제공할 수 있도록 노력하는 SSE가 되겠습니다.
+                                                </div>
+                                            </div>
                                         </div>
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <span class="text-muted p-l-10">2021-07-07</span>
+                                                    <a href="#" class="collapsed link p-10" id="headingTwo" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                                        [이벤트] 회원 가입 이밴트 안내
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordian-3">
+                                                <div class="card-body p-l-10">
+                                                    [이벤트] 회원 가입 이밴트 안내</br>
+                                                    ■ 가입 조건 및 운영 기간</br>
+                                                    - 가입 조건 : 7월 1일 이후 신규 가입 및 농협 실명 계좌 최초 등록 고객</br>
+                                                    - 프로모션 운영 기간 : 2021년 7월 1일부터 9월 30일까지</br>
+                                                    - 페이백 지급일 : 가입 완료 이후 매 익월 10일경</br>
+                                                    회원님의 더욱 편리하고 안전한 거래를 위해 최선의 서비스를 제공할 수 있도록 노력하는 SSE가 되겠습니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <span class="text-muted p-l-10">2021-07-07</span>
+                                                    <a href="#" class="collapsed link p-10" id="headingThree" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                                        [이벤트] 회원 가입 이밴트 안내
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordian-3">
+                                                <div class="card-body p-l-10">
+                                                    [이벤트] 회원 가입 이밴트 안내</br>
+                                                    ■ 가입 조건 및 운영 기간</br>
+                                                    - 가입 조건 : 7월 1일 이후 신규 가입 및 농협 실명 계좌 최초 등록 고객</br>
+                                                    - 프로모션 운영 기간 : 2021년 7월 1일부터 9월 30일까지</br>
+                                                    - 페이백 지급일 : 가입 완료 이후 매 익월 10일경</br>
+                                                    회원님의 더욱 편리하고 안전한 거래를 위해 최선의 서비스를 제공할 수 있도록 노력하는 SSE가 되겠습니다.
+                                                </div>
+                                            </div>
+                                        </div>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -231,6 +290,10 @@
     <!--morris JavaScript -->
     <script src="../assets/node_modules/raphael/raphael.min.js"></script>
     <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
+    <!-- Sweet-Alert  -->
+    <script src="../assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+    <!-- ============================================================== -->
     <!--c3 JavaScript -->
     <script src="../assets/node_modules/d3/d3.min.js"></script>
     <script src="../assets/node_modules/c3-master/c3.min.js"></script>

@@ -22,6 +22,8 @@
     <link href="../assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
     <!--Toaster Popup message CSS -->
     <link href="../assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!--alerts CSS -->
+    <link href="../assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Dashboard 1 Page CSS -->
@@ -159,10 +161,10 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">구매하기</h3>
+                        <h3 class="text-themecolor">1:1 문의</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">구매하기</li>
+                            <li class="breadcrumb-item active">1:1 문의</li>
                         </ol>
                     </div>
                 </div>
@@ -170,18 +172,133 @@
 
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-md-6 offset-md-3">
+                    <div class="col-md-8 offset-md-2">
                         <div class="card">
                             <div class="card-body">
-                                <div class="p-10">
-                                    <div class="align-slef-center">
-                                        <h4 class="m-b-0 p-b-40">구매하기</h4>
+                                <h4 class="card-title">1:1 문의</h4>
+                                <h6 class="card-subtitle">문의내용을 자세하게 작성해주시면, 신속하게 답변드리겠습니다.</h6>
+                                <div class="text-right p-b-20"><button type="button" class="btn waves-effect waves-light btn-sm btn-info" data-toggle="modal" data-target="#responsive-modal" class="model_img img-responsive">문의하기</button></div>
 
-                                        <h6 class="text-warning p-t-40 p-b-40 text-center">계좌 확인 버튼을 누르고, 생성되는 계좌를 확인 후 구매 진행하세요.</h6>
-
-                                        <div class="align-self-center text-center d-md-block p-t-30">
-                                            <a href="token_purchase.html"><button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">계좌 확인</button></a>
+                                <!-- sample modal content -->
+                                <div id="responsive-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h4 class="modal-title">1:1 문의하기</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="recipient-name" class="control-label text-white">제목:</label>
+                                                        <input type="text" class="form-control" id="recipient-name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="message-text" class="control-label text-white">문의내용:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default waves-effect text-white" data-dismiss="modal">취소</button>
+                                                <button type="button" class="btn btn-danger waves-effect waves-light">문의 하기</button>
+                                            </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <!-- /.modal -->
+
+                                <div id="accordian-part">
+                                    <div id="accordian-3">
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <span class="text-muted p-l-10">2021-07-07</span>
+                                                    <a href="#" class="link p-10" id="headingOne" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                                        계좌오류 문의 <span class="text-danger p-l-10">[답변 대기]</span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordian-3">
+                                                <div class="card-body p-l-10">
+                                                    [이벤트] 회원 가입 이밴트 안내</br>
+                                                    ■ 가입 조건 및 운영 기간</br>
+                                                    - 가입 조건 : 7월 1일 이후 신규 가입 및 농협 실명 계좌 최초 등록 고객</br>
+                                                    - 프로모션 운영 기간 : 2021년 7월 1일부터 9월 30일까지</br>
+                                                    - 페이백 지급일 : 가입 완료 이후 매 익월 10일경</br>
+                                                    회원님의 더욱 편리하고 안전한 거래를 위해 최선의 서비스를 제공할 수 있도록 노력하는 SSE가 되겠습니다.
+                                                    <div class=" display-6 text-right"><button type="button" class="btn waves-effect waves-light btn-xs btn-danger">삭제</button></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <span class="text-muted p-l-10">2021-07-07</span>
+                                                    <a href="#" class="collapsed link p-10" id="headingTwo" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                                        계좌오류 문의 <span class="text-success p-l-10">[답변 완료]</span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordian-3">
+                                                <div class="card-body p-l-10">
+                                                    [이벤트] 회원 가입 이밴트 안내</br>
+                                                    ■ 가입 조건 및 운영 기간</br>
+                                                    - 가입 조건 : 7월 1일 이후 신규 가입 및 농협 실명 계좌 최초 등록 고객</br>
+                                                    - 프로모션 운영 기간 : 2021년 7월 1일부터 9월 30일까지</br>
+                                                    - 페이백 지급일 : 가입 완료 이후 매 익월 10일경</br>
+                                                    회원님의 더욱 편리하고 안전한 거래를 위해 최선의 서비스를 제공할 수 있도록 노력하는 SSE가 되겠습니다.
+                                                </div>
+                                                <div class="card-body p-l-10">
+                                                 -------------------------------------------------------------------------------------------------------------------------
+                                                </div>
+                                                <div class="card-body p-l-20">
+                                                    <span class="text-success">[답변]</span></br>
+                                                    [이벤트] 회원 가입 이밴트 안내</br>
+                                                    ■ 가입 조건 및 운영 기간</br>
+                                                    - 가입 조건 : 7월 1일 이후 신규 가입 및 농협 실명 계좌 최초 등록 고객</br>
+                                                    - 프로모션 운영 기간 : 2021년 7월 1일부터 9월 30일까지</br>
+                                                    - 페이백 지급일 : 가입 완료 이후 매 익월 10일경</br>
+                                                    회원님의 더욱 편리하고 안전한 거래를 위해 최선의 서비스를 제공할 수 있도록 노력하는 SSE가 되겠습니다.
+                                                    <div class=" display-6 text-right"><button type="button" class="btn waves-effect waves-light btn-xs btn-danger">삭제</button></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card m-b-0 border-0">
+                                            <div class="card-header p-l-0">
+                                                <h5 class="mb-0">
+                                                    <span class="text-muted p-l-10">2021-07-07</span>
+                                                    <a href="#" class="collapsed link p-10" id="headingThree" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                                        [이벤트] 회원 가입 이밴트 안내<span class="text-success p-l-10">[답변 완료]</span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordian-3">
+                                                <div class="card-body p-l-10">
+                                                    [이벤트] 회원 가입 이밴트 안내</br>
+                                                    ■ 가입 조건 및 운영 기간</br>
+                                                    - 가입 조건 : 7월 1일 이후 신규 가입 및 농협 실명 계좌 최초 등록 고객</br>
+                                                    - 프로모션 운영 기간 : 2021년 7월 1일부터 9월 30일까지</br>
+                                                    - 페이백 지급일 : 가입 완료 이후 매 익월 10일경</br>
+                                                    회원님의 더욱 편리하고 안전한 거래를 위해 최선의 서비스를 제공할 수 있도록 노력하는 SSE가 되겠습니다.
+                                                </div>
+                                                <div class="card-body p-l-10">
+                                                    -------------------------------------------------------------------------------------------------------------------------
+                                                </div>
+                                                <div class="card-body p-l-20">
+                                                    <span class="text-success">[답변]</span></br>
+                                                    [이벤트] 회원 가입 이밴트 안내</br>
+                                                    ■ 가입 조건 및 운영 기간</br>
+                                                    - 가입 조건 : 7월 1일 이후 신규 가입 및 농협 실명 계좌 최초 등록 고객</br>
+                                                    - 프로모션 운영 기간 : 2021년 7월 1일부터 9월 30일까지</br>
+                                                    - 페이백 지급일 : 가입 완료 이후 매 익월 10일경</br>
+                                                    회원님의 더욱 편리하고 안전한 거래를 위해 최선의 서비스를 제공할 수 있도록 노력하는 SSE가 되겠습니다.
+                                                    <div class=" display-6 text-right"><button type="button" class="btn waves-effect waves-light btn-xs btn-danger">삭제</button></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -231,6 +348,10 @@
     <!--morris JavaScript -->
     <script src="../assets/node_modules/raphael/raphael.min.js"></script>
     <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
+    <!-- Sweet-Alert  -->
+    <script src="../assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+    <!-- ============================================================== -->
     <!--c3 JavaScript -->
     <script src="../assets/node_modules/d3/d3.min.js"></script>
     <script src="../assets/node_modules/c3-master/c3.min.js"></script>
